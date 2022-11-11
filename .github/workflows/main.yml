@@ -25,3 +25,4 @@ jobs:
         cd infra_project/
         python manage.py runserver
         python manage.py test
+        pkill -f runserver
