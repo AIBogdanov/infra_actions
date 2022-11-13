@@ -44,7 +44,7 @@ jobs:
         with:
           push: true
           context: .
-          tags: ower94 / infra_actions:latest
+          tags: ower94/infra_actions
   
   deploy:
     runs-on: ubuntu-latest
@@ -58,6 +58,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}]
         script: |
-          sudo docker pull ower94 / infra_actions
+          sudo docker pull ower94/infra_actions
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 ower94 / infra_actions
+          sudo docker run --rm -d -p 5000:5000 ower94/infra_actions
